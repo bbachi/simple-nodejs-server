@@ -1,0 +1,25 @@
+{
+  "name": "simple-nodejs-server",
+  "version": "1.0.0",
+  "description": "Simple nodej sserver with core HTTP module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon ./index.js localhost 3030",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbachi/simple-nodejs-server.git"
+  },
+  "author": "Bhargav Bachina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbachi/simple-nodejs-server/issues"
+  },
+  "homepage": "https://github.com/bbachi/simple-nodejs-server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

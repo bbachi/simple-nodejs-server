@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: node-api
+  name: node-api
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: node-api
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: node-api
+    spec:
+      containers:
+      - image: docker.io/bbachin1/node-http-api
+        name: node-api
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 3030 
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-api
+  labels:
+    run: node-api
+spec:
+  ports:
+  - port: 3030
+    protocol: TCP
+  selector:
+    app: node-api
+  type: NodePort
